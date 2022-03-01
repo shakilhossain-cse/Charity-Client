@@ -1,4 +1,5 @@
 import React from 'react';
+import error from '../../assets/8.svg'
 
 const NotFound: React.FC = () => {
     return (
@@ -6,7 +7,7 @@ const NotFound: React.FC = () => {
 
 
             <div className="bg-indigo-900 relative overflow-hidden h-screen">
-                <img src="https://cdn.pixabay.com/photo/2020/06/07/02/12/caricature-5268734_1280.jpg" className="absolute h-full w-full object-cover" />
+                <img src={error} className="absolute h-full w-full object-cover" />
                 <div className="inset-0 bg-black opacity-25 absolute">
                 </div>
                 <div className="container mx-auto px-6 md:px-12 relative z-10 flex items-center py-32 xl:py-40">
