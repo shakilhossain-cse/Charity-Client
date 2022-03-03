@@ -19,8 +19,8 @@ const Navbar: React.FC = () => {
             <nav
                 className={
                     changeHeader
-                        ? " bg-gray-800 text-white fixed z-50 top-0 left-0 w-full body-font shadow-md transition duration-500"
-                        : "w-full bg-transparent absolute text-gray-100 body-font shadow-sm "
+                        ? "bg-transparent text-white fixed z-50 top-0 left-0 w-full body-font shadow-md transition duration-500"
+                        : "w-full bg-gray-800 text-gray-100 body-font shadow-sm "
                 }
             >
                 {/* :DESKTOP MENU */}
