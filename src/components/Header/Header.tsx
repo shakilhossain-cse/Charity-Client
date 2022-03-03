@@ -12,6 +12,7 @@ import { Link } from "react-router-dom";
 const Header: React.FC = () => {
   return (
     <div className="md:container md:mx-auto grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2  py-2  h-2/3 ">
+
       <div className="text-sm flex justify-center">
         <div className="flex items-center">
           <MdEmail className="text-red-400" />
