@@ -24,10 +24,10 @@ const Banner: React.FC = () => {
         }}
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
-        className="h-[52rem]"
+        className="h-[40rem]"
       >
         <SwiperSlide className="bg-[url('http://muzaddidul.com/Charity-sympathy/images/slider/3.jpg')] bg-no-repeat bg-cover banner flex items-center justify-center">
-        <div className="text-white z-30 md:w-1/2 p-4">
+          <div className="text-white z-30 md:w-1/2 p-4">
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi,
               quidem!
@@ -47,7 +47,7 @@ const Banner: React.FC = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide className="bg-[url('http://muzaddidul.com/Charity-sympathy/images/slider/2.jpg')] bg-no-repeat bg-cover banner flex items-center justify-center">
-        <div className="text-white z-30 p-4 md:w-1/2">
+          <div className="text-white z-30 p-4 md:w-1/2">
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi,
               quidem!
@@ -67,7 +67,7 @@ const Banner: React.FC = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide className="bg-[url('http://muzaddidul.com/Charity-sympathy/images/slider/1.jpg')] bg-no-repeat bg-cover banner flex items-center justify-center">
-        <div className="text-white z-30 p-4  md:w-1/2">
+          <div className="text-white z-30 p-4  md:w-1/2">
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi,
               quidem!
