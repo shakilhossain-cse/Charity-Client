@@ -1,14 +1,15 @@
 import React from 'react'
-import Footer from '../../components/Footer/Footer'
+import Banner from '../../components/Banner/Banner'
 import Header from '../../components/Header/Header'
-import Navbar from '../../components/Navbar/Navbar'
 
-const Home: React.FC = () => {
+const Home:React.FC = () => {
   return (
     <div>
-      <Header />
-      <Navbar />
-      {/* <Footer /> */}
+      <Header/>
+    
+      <Banner/>
+
+      
     </div>
   )
 }
