@@ -11,7 +11,7 @@ import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper";
 const Banner: React.FC = () => {
   return (
-    <div>
+    <div className="-mt-24 z-0">
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
@@ -24,7 +24,7 @@ const Banner: React.FC = () => {
         }}
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
-        className="h-[40rem]"
+        className="h-[50rem]"
       >
         <SwiperSlide className="bg-[url('http://muzaddidul.com/Charity-sympathy/images/slider/3.jpg')] bg-no-repeat bg-cover banner flex items-center justify-center">
           <div className="text-white z-30 md:w-1/2 p-4">
