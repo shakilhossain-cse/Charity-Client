@@ -3,15 +3,6 @@ import React from 'react';
 const Footer: React.FC = () => {
     return (
         <div>
-            {/* <!--
-  This component uses @tailwindcss/forms
-
-  yarn add @tailwindcss/forms
-  npm install @tailwindcss/forms
-
-  plugins: [require('@tailwindcss/forms')]
---> */}
-
             <footer className="bg-gray-900">
                 <div className="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8">
                     <div className="lg:flex lg:gap-8">
