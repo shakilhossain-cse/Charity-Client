@@ -1,5 +1,6 @@
 import React, { Suspense, lazy } from "react";
 import { Routes, BrowserRouter, Route } from "react-router-dom";
+import Login from "../pages/Login/Login";
 import NotFound from "../pages/NotFound/NotFound";
 
 const Home = lazy(() => import("../pages/Home/Home"));
@@ -13,6 +14,7 @@ const AllRoutes: React.FC = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
+            <Route path="/login" element={<Login />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
