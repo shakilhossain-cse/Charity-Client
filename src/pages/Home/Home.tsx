@@ -1,5 +1,6 @@
 import React from "react";
 import Banner from "../../components/Banner/Banner";
+import Causes from "../../components/Causes/Causes";
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
 import Navbar from "../../components/Navbar/Navbar";
@@ -14,7 +15,8 @@ const Home: React.FC = () => {
       <Navbar />
       <Banner />
       <OurMission />
-      {/* <Volunteers /> */}
+      <Volunteers />
+      <Causes />
       {/* <Contact /> */}
       <Footer />
     </div>

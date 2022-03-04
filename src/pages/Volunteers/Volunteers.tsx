@@ -1,12 +1,5 @@
 import React from 'react';
 
-const Volunteer = [
-    {
-        'name': 'Harry Jonas',
-        'img': 'https://images.unsplash.com/photo-1523275335684-37898b6baf30'
-    }
-]
-
 const Volunteers: React.FC = () => {
     return (
         <div>
@@ -31,9 +24,79 @@ const Volunteers: React.FC = () => {
                                 </a>
                             </div>
                         </div>
-                        {/* Single Card */}
-                        <div className="grid grid-cols-2 gap-4 lg:col-span-2 lg:grid-cols-3 lg:py-12">
 
+                        <div className="grid grid-cols-2 gap-4 lg:col-span-2 lg:grid-cols-3 lg:py-12">
+                            <a
+                                href="/product/simple-watch"
+                                className="block"
+                            >
+                                <div className="aspect-w-1 aspect-h-1">
+                                    <img
+                                        loading="lazy"
+                                        alt="Simple Watch"
+                                        className="object-cover rounded"
+                                        src="https://images.unsplash.com/photo-1523275335684-37898b6baf30"
+                                    />
+                                </div>
+
+                                <div className="mt-2">
+                                    <h5 className="font-medium">
+                                        Simple Watch
+                                    </h5>
+
+                                    <p className="mt-1 text-sm text-gray-700">
+                                        $150
+                                    </p>
+                                </div>
+                            </a>
+
+                            <a
+                                href="/product/simple-watch"
+                                className="block"
+                            >
+                                <div className="aspect-w-1 aspect-h-1">
+                                    <img
+                                        loading="lazy"
+                                        alt="Simple Watch"
+                                        className="object-cover rounded"
+                                        src="https://images.unsplash.com/photo-1523275335684-37898b6baf30"
+                                    />
+                                </div>
+
+                                <div className="mt-2">
+                                    <h5 className="font-medium">
+                                        Simple Watch
+                                    </h5>
+
+                                    <p className="mt-1 text-sm text-gray-700">
+                                        $150
+                                    </p>
+                                </div>
+                            </a>
+
+                            <a
+                                href="/product/simple-watch"
+                                className="block"
+                            >
+                                <div className="aspect-w-1 aspect-h-1">
+                                    <img
+                                        loading="lazy"
+                                        alt="Simple Watch"
+                                        className="object-cover rounded"
+                                        src="https://images.unsplash.com/photo-1523275335684-37898b6baf30"
+                                    />
+                                </div>
+
+                                <div className="mt-2">
+                                    <h5 className="font-medium">
+                                        Simple Watch
+                                    </h5>
+
+                                    <p className="mt-1 text-sm text-gray-700">
+                                        $150
+                                    </p>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>
