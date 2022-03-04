@@ -16,11 +16,7 @@ const Causes: React.FC = () => {
                     </div>
 
                     <div className="grid grid-cols-1 gap-8 pt-10 mt-16 border-t border-gray-100 sm:grid-cols-2 lg:grid-cols-3 sm:gap-16" >
-<<<<<<< HEAD
                         {/* Map will be here */}
-=======
-                        {/* map will be here */}
->>>>>>> origin
                         <div>
                             <img
                                 src="http://muzaddidul.com/Charity-sympathy/images/causes/2.jpg"
@@ -40,13 +36,8 @@ const Causes: React.FC = () => {
                                 </p>
 
                                 <div className="flex space-x-0.5  mt-3 text-white justify-start">
-<<<<<<< HEAD
-                                    <button className="bg-red-600 px-8 py-2 rounded-full mt-4">
-                                        Join Us
-=======
-                                    <button className="bg-red-600 px-8 py-2 rounded-full mt-4 uppercase">
+                                    <button className="bg-red-600 uppercase px-8 py-2 rounded-full mt-4">
                                         Donate Now
->>>>>>> origin
                                     </button>
                                 </div>
                             </blockquote>
