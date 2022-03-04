@@ -11,7 +11,7 @@ const Home: React.FC = () => {
       <Header />
       <Navbar />
       <Banner />
-      <Contact />
+      {/* <Contact /> */}
       <Footer />
     </div>
   );

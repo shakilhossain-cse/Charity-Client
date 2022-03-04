@@ -36,20 +36,22 @@ const Navbar: React.FC = () => {
                         </span>
                     </a>
                     {/* ::Navbar */}
-                    <nav className="hidden md:mr-auto md:ml-4 md:pl-4 md:border-l md:border-gray-500 md:flex flex-wrap items-center justify-center text-base tracking-wide">
-                        <a href="#link" className="mr-8 hover:text-red-500">
-                            Solutions
-                        </a>
-                        <a href="#link" className="mr-8 hover:text-red-500">
-                            Prices
-                        </a>
-                        <a href="#link" className="mr-8 hover:text-red-500">
-                            About
-                        </a>
-                        <a href="#link" className="mr-8 hover:text-red-500">
-                            Contact
-                        </a>
-                    </nav>
+                    <div className="flex justify-center">
+                        <nav className="hidden md:mr-auto md:border-gray-500 md:flex flex-wrap items-center justify-center text-base tracking-wide">
+                            <a href="#link" className="mr-8 hover:text-red-500">
+                                Solutions
+                            </a>
+                            <a href="#link" className="mr-8 hover:text-red-500">
+                                Prices
+                            </a>
+                            <a href="#link" className="mr-8 hover:text-red-500">
+                                About
+                            </a>
+                            <a href="#link" className="mr-8 hover:text-red-500">
+                                Contact
+                            </a>
+                        </nav>
+                    </div>
                     {/* ::Avatar */}
                     <div className="hidden sm:inline-flex ml-auto md:ml-0 mr-4 md:mr-0 cursor-pointer">
                         <svg
