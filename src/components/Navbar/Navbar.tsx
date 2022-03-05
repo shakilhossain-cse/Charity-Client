@@ -19,9 +19,9 @@ const Navbar: React.FC = () => {
       className={
         changeHeader
           ? " text-white fixed z-50 top-0 left-0 w-full body-font shadow-md transition bg-gray-800 duration-500"
-          : "w-full bg-transparent-dark text-gray-100 body-font shadow-sm sticky z-50"
+          : "w-full bg-neutral-900 bg-opacity-25 text-gray-100 body-font shadow-sm sticky z-50"
       }
-     
+
     >
       {/* :DESKTOP MENU */}
       <div className="container mx-auto flex justify-between items-center py-7 px-5">
