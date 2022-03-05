@@ -7,7 +7,7 @@ const OurMission: React.FC = () => {
         <div className="max-w-screen-xl px-4 py-16 mx-auto sm:px-6 lg:px-8 sm:py-24">
           <div className="max-w-xl mx-auto text-center">
             <h2 className="text-4xl font-bold tracking-tight sm:text-5xl">
-              Our Mission
+              Our <span className='text-red-600'>Mission</span>
             </h2>
             <p className="max-w-lg mx-auto mt-4 text-gring-offset-warm-gray-500">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -23,7 +23,7 @@ const OurMission: React.FC = () => {
                 className="object-cover w-28 h-28 mx-auto rounded-full shadow-xl hover:shadow-2xl"
               />
               <blockquote className="flex flex-col justify-between p-12 -mt-6 text-center rounded-lg  ">
-              <h2 className="font-bold text-2xl pt-3">DONATION</h2>
+                <h2 className="font-bold text-2xl pt-3">DONATION</h2>
                 <p className="mt-4 text-sm text-gray-500">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Deserunt voluptatem alias ut provident sapiente repellendus.
@@ -45,7 +45,7 @@ const OurMission: React.FC = () => {
               />
 
               <blockquote className="flex flex-col justify-between p-12 -mt-6 text-center rounded-lg  ">
-              <h2 className="font-bold text-2xl pt-3">VOLUNTEERS</h2>
+                <h2 className="font-bold text-2xl pt-3">VOLUNTEERS</h2>
                 <p className="mt-4 text-sm text-gray-500">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Deserunt voluptatem alias ut provident sapiente repellendus.
@@ -67,7 +67,7 @@ const OurMission: React.FC = () => {
               />
 
               <blockquote className="flex flex-col justify-between p-12 -mt-6 text-center rounded-lg ">
-              <h2 className="font-bold text-2xl pt-3">FUNDRAISING</h2>
+                <h2 className="font-bold text-2xl pt-3">FUNDRAISING</h2>
                 <p className="mt-4 text-sm text-gray-500">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Deserunt voluptatem alias ut provident sapiente repellendus.
