@@ -7,7 +7,7 @@ import Navbar from "../../components/Navbar/Navbar";
 import Contact from "../Contact/Contact";
 import OurMission from "../../components/Mission/Mission";
 import Volunteers from "../../components/Volunteers/Volunteers";
-
+import Fund from "../../components/Fund/Fund";
 
 const Home: React.FC = () => {
   return (
@@ -18,6 +18,7 @@ const Home: React.FC = () => {
       <OurMission />
       {/* <Volunteers /> */}
       <Causes />
+      <Fund />
       {/* <Contact /> */}
       <Footer />
     </div>
