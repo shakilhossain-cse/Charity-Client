@@ -7,12 +7,12 @@ const JoinUs: React.FC = () => {
                 <div className="py-16 sm:py-28 px-4 flex justify-center items-center bg-fixed bg-neutral-600">
 
                     {/* :IMAGE BACKGROUND */}
-                    <img src="http://muzaddidul.com/Charity-sympathy/images/background/pb.jpg" alt="" className=" absolute inset-0 w-full h-full object-cover filter mix-blend-overlay" />
+                    <img src="https://i.ibb.co/KGbvXCH/joinus.png" alt="" className=" absolute inset-0 w-full h-full object-cover filter mix-blend-overlay" />
 
 
                     <div className="relative max-w-2xl flex flex-col justify-center items-center text-center">
                         {/* ::Title */}
-                        <h2 className="text-2xl sm:text-3xl md:text-4xl text-white font-extrabold tracking-wide">WE HELP MANY PEOPLE</h2>
+                        <h2 className="text-2xl sm:text-3xl md:text-4xl text-white font-semibold tracking-wide">WE HELP MANY PEOPLE</h2>
                         {/* ::Text */}
                         <p className="mt-3 text-sm sm:text-base text-white font-medium">WANT TO BECOME A <span className='text-red-600'>VOLUNTEER!</span></p>
                         {/* ::Text */}
