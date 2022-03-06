@@ -8,6 +8,7 @@ import Contact from "../Contact/Contact";
 import OurMission from "../../components/Mission/Mission";
 import Volunteers from "../../components/Volunteers/Volunteers";
 import Fund from "../../components/Fund/Fund";
+import JoinUs from "../../components/JoinUs/JoinUs";
 
 const Home: React.FC = () => {
   return (
@@ -19,6 +20,7 @@ const Home: React.FC = () => {
       {/* <Volunteers /> */}
       <Causes />
       <Fund />
+      <JoinUs />
       {/* <Contact /> */}
       <Footer />
     </div>
