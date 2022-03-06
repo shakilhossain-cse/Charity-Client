@@ -22,7 +22,7 @@ const Banner: React.FC = () => {
         modules={[Autoplay, Pagination, Navigation]}
         className="h-[48rem]"
       >
-        <SwiperSlide className="bg-[url('http://muzaddidul.com/Charity-sympathy/images/slider/3.jpg')] bg-no-repeat bg-cover banner flex items-center justify-center">
+        <SwiperSlide className="bg-[url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80')] bg-no-repeat bg-cover banner flex items-center justify-center">
           <div className="text-white z-30 md:w-1/2 p-4">
             <Fade cascade>
               <p>

@@ -10,7 +10,6 @@ const JoinUs: React.FC = () => {
                     <img src="http://muzaddidul.com/Charity-sympathy/images/background/pb.jpg" alt="" className=" absolute inset-0 w-full h-full object-cover filter mix-blend-overlay" />
 
 
-                    {/* :PROMO */}
                     <div className="relative max-w-2xl flex flex-col justify-center items-center text-center">
                         {/* ::Title */}
                         <h2 className="text-2xl sm:text-3xl md:text-4xl text-white font-extrabold tracking-wide">WE HELP MANY PEOPLE</h2>
