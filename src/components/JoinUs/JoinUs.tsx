@@ -18,7 +18,7 @@ const JoinUs: React.FC = () => {
                         {/* ::Text */}
                         <p className="mt-3 text-sm sm:text-base text-white font-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex nemo consequuntur iusto cum ea nostrum! Porro at iste consequatur placeat, suscipit, odio neque officia.</p>
                         {/* ::Button */}
-                        <button className="bg-transparent text-red-600 px-5 py-1 rounded-full mt-4 border-2 border-solid border-red-600 hover:bg-red-600 hover:text-white">
+                        <button className="bg-transparent text-red-600 px-5 py-1 rounded-full mt-4 border-2 border-solid border-red-600 hover:bg-red-600 hover:text-white  duration-700">
                             Apply Now
                         </button>
                     </div>

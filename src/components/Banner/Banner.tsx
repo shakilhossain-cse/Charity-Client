@@ -38,7 +38,7 @@ const Banner: React.FC = () => {
                 error dolorem. Omnis dolore suscipit a iusto saepe magni libero
                 facilis nulla esse alias.
               </p>
-              <button className="bg-red-600 px-8 py-3 rounded-full mt-4">
+              <button className="bg-red-600 hover:bg-transparent text-white border-2 border-solid border-red-600 hover:text-red-600 px-8 py-3 rounded-full mt-4 duration-700 ">
                 Join Us Today
               </button>
             </Fade>
@@ -60,7 +60,7 @@ const Banner: React.FC = () => {
                 error dolorem. Omnis dolore suscipit a iusto saepe magni libero
                 facilis nulla esse alias.
               </p>
-              <button className="bg-red-600 px-8 py-3 rounded-full mt-4">
+              <button className="bg-red-600 hover:bg-transparent text-white border-2 border-solid border-red-600 hover:text-red-600 px-8 py-3 rounded-full mt-4 duration-700 ">
                 Join Us Today
               </button>
             </Fade>
@@ -82,7 +82,7 @@ const Banner: React.FC = () => {
                 error dolorem. Omnis dolore suscipit a iusto saepe magni libero
                 facilis nulla esse alias.
               </p>
-              <button className="bg-red-600 px-8 py-3 rounded-full mt-4">
+              <button className="bg-red-600 hover:bg-transparent text-white border-2 border-solid border-red-600 hover:text-red-600 px-8 py-3 rounded-full mt-4 duration-700 ">
                 Join Us Today
               </button>
             </Fade>

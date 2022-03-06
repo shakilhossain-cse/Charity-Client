@@ -30,7 +30,7 @@ const OurMission: React.FC = () => {
                 </p>
 
                 <div className="flex space-x-0.5 justify-center mt-8">
-                  <button className="bg-white text-red-600 px-5 py-1 rounded-full mt-4 border-2 border-solid border-red-400 hover:bg-red-600 hover:text-white">
+                  <button className="bg-white duration-700 text-red-600 px-5 py-1 rounded-full mt-4 border-2 border-solid border-red-400 hover:bg-red-600 hover:text-white">
                     Join Us
                   </button>
                 </div>
@@ -52,7 +52,7 @@ const OurMission: React.FC = () => {
                 </p>
 
                 <div className="flex space-x-0.5 justify-center mt-8 text-white">
-                  <button className="bg-white text-red-600 px-5 py-1 rounded-full mt-4 border-2 border-solid border-red-400 hover:bg-red-600 hover:text-white">
+                  <button className="bg-white duration-700 text-red-600 px-5 py-1 rounded-full mt-4 border-2 border-solid border-red-400 hover:bg-red-600 hover:text-white">
                     Join Us
                   </button>
                 </div>
@@ -74,7 +74,7 @@ const OurMission: React.FC = () => {
                 </p>
 
                 <div className="flex space-x-0.5 justify-center mt-8 text-white">
-                  <button className="bg-white text-red-600 px-5 py-1 rounded-full mt-4 border-2 border-solid border-red-400 hover:bg-red-600 hover:text-white">
+                  <button className="bg-white duration-700 text-red-600 px-5 py-1 rounded-full mt-4 border-2 border-solid border-red-400 hover:bg-red-600 hover:text-white">
                     Join Us
                   </button>
                 </div>
