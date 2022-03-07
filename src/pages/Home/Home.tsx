@@ -18,8 +18,8 @@ const Home: React.FC = () => {
       <Navbar />
       <Banner />
       <OurMission />
-      <Volunteers />
       <Causes />
+      <Volunteers />
       <Fund />
       <JoinUs />
       <Sponsor />

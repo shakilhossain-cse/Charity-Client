@@ -75,7 +75,7 @@ const Causes: React.FC = () => {
                                         </p>
 
                                         <div className="flex space-x-0.5  mt-3 text-white justify-start">
-                                            <button className="bg-white duration-700 text-red-600 px-8 py-2 uppercase rounded-full mt-4 border-2 border-solid border-red-400 hover:bg-red-600 hover:text-white">
+                                            <button className="bg-white duration-700 text-red-600 px-6 py-2 uppercase rounded-full mt-4 border-2 border-solid border-red-400 hover:bg-red-600 hover:text-white">
                                                 Donate Now
                                             </button>
                                         </div>
