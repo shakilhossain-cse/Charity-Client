@@ -20,7 +20,7 @@ const OurMission: React.FC = () => {
               <img
                 src="http://muzaddidul.com/Charity-sympathy/images/missions/1.png"
                 alt=""
-                className="object-cover w-28 h-28 mx-auto rounded-full shadow-xl hover:drop-shadow-xl"
+                className="object-cover w-28 h-28 mx-auto rounded-full shadow-xl hover:drop-shadow-xl "
               />
               <blockquote className="flex flex-col justify-between p-12 -mt-6 text-center rounded-lg  ">
                 <h2 className="font-bold text-2xl pt-3">DONATION</h2>
