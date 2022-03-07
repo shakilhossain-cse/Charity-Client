@@ -1,6 +1,40 @@
-import React from 'react';
+import React, { useState } from 'react';
+
+const CausesData = [
+    {
+        id: 1,
+        title: "Help to reach food",
+        price: 150,
+        img: "http://muzaddidul.com/Charity-sympathy/images/causes/2.jpg",
+        desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt'
+    },
+    {
+        id: 2,
+        title: "Help to reach food",
+        price: 150,
+        img: "http://muzaddidul.com/Charity-sympathy/images/causes/3.jpg",
+        desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt'
+    },
+    {
+        id: 3,
+        title: "Help to reach food",
+        price: 150,
+        img: "http://muzaddidul.com/Charity-sympathy/images/causes/1.jpg",
+        desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt'
+    }
+];
+
+interface Data {
+    id: number;
+    img: string;
+    price: number;
+    title: string;
+    desc: string;
+}
 
 const Causes: React.FC = () => {
+    const [causes, setCauses] = useState<Data[]>(CausesData);
+
     return (
         <>
             <section className="bg-white">
@@ -16,32 +50,39 @@ const Causes: React.FC = () => {
                     </div>
 
                     <div className="grid grid-cols-1 gap-8 pt-10 mt-16 border-t border-gray-100 sm:grid-cols-2 lg:grid-cols-3 sm:gap-16" >
-                        {/* Map will be here */}
-                        <div>
-                            <img
-                                src="http://muzaddidul.com/Charity-sympathy/images/causes/2.jpg"
-                                alt=""
-                                className="w-80 h-50 mx-auto shadow-xl"
-                            />
+                        {/* single card  */}
+                        {
+                            causes.map((cause: Data, i: Number) => (
+                                <div>
+                                    <img
+                                        src={cause.img}
+                                        alt=""
+                                        className="w-80 h-50 mx-auto shadow-xl"
+                                    />
 
-                            <blockquote
-                                className="flex flex-col justify-between p-10 -mt-6 text-left rounded-lg shadow-xl "
-                            >
-                                <p className="text-lg text-red-500 font-semibold">
-                                    $189.99
-                                </p>
-                                <p className="mt-4 text-sm text-gray-500">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
-                                    voluptatem alias ut provident sapiente repellendus.
-                                </p>
+                                    <blockquote
+                                        className="flex flex-col justify-between p-10 -mt-6 text-left rounded-lg shadow-xl "
+                                    >
+                                        <p className="text-xl  text-red-500 font-extrabold">
+                                            ${cause.price}
+                                        </p>
+                                        <p className="text-2xl font-bold tracking-tight">
+                                            {cause.title}
+                                        </p>
+                                        <p className="mt-4 text-sm text-gray-500">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
+                                            voluptatem alias ut provident sapiente repellendus.
+                                        </p>
 
-                                <div className="flex space-x-0.5  mt-3 text-white justify-start">
-                                    <button className="bg-red-600 uppercase px-8 py-2 rounded-full mt-4">
-                                        Donate Now
-                                    </button>
+                                        <div className="flex space-x-0.5  mt-3 text-white justify-start">
+                                            <button className="bg-white duration-700 text-red-600 px-8 py-2 uppercase rounded-full mt-4 border-2 border-solid border-red-400 hover:bg-red-600 hover:text-white">
+                                                Donate Now
+                                            </button>
+                                        </div>
+                                    </blockquote>
                                 </div>
-                            </blockquote>
-                        </div>
+                            ))
+                        }
                     </div>
                 </div>
             </section>
