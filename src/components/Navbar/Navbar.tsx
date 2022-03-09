@@ -32,7 +32,7 @@ const Navbar: React.FC = () => {
         >
           <img src={logo} className="w-10 h-10" alt="" />
           <span className="ml-3 text-xl text-gray-100 font-semibold antialiased">
-            Charity Home
+            Charity
           </span>
         </a>
         {/* ::Navbar */}
