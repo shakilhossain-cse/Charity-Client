@@ -28,29 +28,27 @@ const Fund: React.FC = () => {
           <div className="flex items-center py-3">
             <FiCheckSquare className="text-red-500" />
             <p className="mx-4 font-semibold">
-              60%{" "}
-              <span className="text-gray-500 font-normal">money goes for</span>{" "}
-              Food Donation{" "}
-              <span className="text-gray-500 font-normal">in </span>
-              Syria
+              35%{" "}
+              <span className="text-gray-500 font-normal">money goes for</span>Educational Fund <span className="text-gray-500 font-normal">in </span>
+              Bihar
             </p>
           </div>
           <div className="flex items-center py-3">
             <FiCheckSquare className="text-red-500" />
             <p className="mx-4 font-semibold">
-              60%{" "}
+              15%{" "}
               <span className="text-gray-500 font-normal">money goes for</span>{" "}
-              Food Donation{" "}
+              Health Donation
               <span className="text-gray-500 font-normal">in </span>
-              Syria
+              Bangladesh
             </p>
           </div>
           <div className="flex items-center py-3">
             <FiCheckSquare className="text-red-500" />
             <p className="mx-4 font-semibold">
-              60%{" "}
+              20%{" "}
               <span className="text-gray-500 font-normal">money goes for</span>{" "}
-              Food Donation{" "}
+              Building house
               <span className="text-gray-500 font-normal">in </span>
               Syria
             </p>

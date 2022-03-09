@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import login from "../../assets/Charity_login.png";
+import { FaLongArrowAltLeft } from 'react-icons/fa';
+
 
 const Login: React.FC = () => {
   return (
@@ -8,8 +10,8 @@ const Login: React.FC = () => {
       <div className="flex flex-wrap w-full">
         <div className="flex flex-col w-full md:w-1/2">
           <div className="flex justify-center pt-12 md:justify-start md:pl-12 md:-mb-24">
-            <Link to="/" className="p-4 text-xl font-bold text-white bg-black">
-              Charity Home
+            <Link to="/" className="p-4 text-xl font-bold text-black bg-gray-200">
+             <FaLongArrowAltLeft/>
             </Link>
           </div>
           <div className="flex flex-col justify-center px-8 pt-8 my-auto md:justify-start md:pt-0 md:px-24 lg:px-32">
