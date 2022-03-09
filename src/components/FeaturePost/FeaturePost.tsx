@@ -33,12 +33,10 @@ const FeaturePost: React.FC = () => {
                 syrian <br />
                 child &amp; <span className="text-red-500">food planting</span>
               </h3>
-              <div className="w-full bg-gray-200 rounded-full h-4 my-4">
-                <div
-                  className="bg-red-500 h-4 rounded-full"
-                  style={{ width: " 65%" }}
-                ></div>
-              </div>
+           <div className="w-full bg-gray-200 rounded-full my-3">
+  <div className="bg-red-600 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style={{width: '45%'}}> 45%</div>
+</div>
+
               <h5 className="font-bold text-red-500 text-2xl">
                 $400
                 <span className="text-gray-700 text-sm font-normal mx-3">
@@ -67,12 +65,9 @@ const FeaturePost: React.FC = () => {
                 syrian <br />
                 child &amp; <span className="text-red-500">food planting</span>
               </h3>
-              <div className="w-full bg-gray-200 rounded-full h-4 my-4">
-                <div
-                  className="bg-red-500 h-4 rounded-full"
-                  style={{ width: " 65%" }}
-                ></div>
-              </div>
+              <div className="w-full bg-gray-200 rounded-full my-3">
+  <div className="bg-red-600 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style={{width: '45%'}}> 45%</div>
+</div>
               <h5 className="font-bold text-red-500 text-2xl">
                 $400
                 <span className="text-gray-700 text-sm font-normal mx-3">
@@ -101,12 +96,9 @@ const FeaturePost: React.FC = () => {
                 syrian <br />
                 child &amp; <span className="text-red-500">food planting</span>
               </h3>
-              <div className="w-full bg-gray-200 rounded-full h-4 my-4">
-                <div
-                  className="bg-red-500 h-4 rounded-full"
-                  style={{ width: " 65%" }}
-                ></div>
-              </div>
+              <div className="w-full bg-gray-200 rounded-full my-3">
+  <div className="bg-red-600 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style={{width: '45%'}}> 45%</div>
+</div>
               <h5 className="font-bold text-red-500 text-2xl">
                 $400
                 <span className="text-gray-700 text-sm font-normal mx-3">
