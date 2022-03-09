@@ -1,18 +1,29 @@
 import React, { useState } from "react";
-import Volunteer from "../Volunteer/Volunteer";
+// import Volunteer from "../Volunteer/Volunteer";
 
 const VolunteerData = [
   {
-    name: "Harry Jonas",
+    id: 1,
+    title: "Harry Jonas",
+    price: 150,
+    img: "https://images.unsplash.com/photo-1523275335684-37898b6baf30",
+  },
+  {
+    id: 2,
+    title: "Harry Jonas",
+    price: 150,
     img: "https://images.unsplash.com/photo-1523275335684-37898b6baf30",
   },
 ];
 interface Newsdata {
-  name: string;
+  id: number;
+  title: string;
+  price: number;
   img: string;
 }
 const Volunteers: React.FC = () => {
-  const [LetestNews, setLetestNews] = useState<Newsdata[]>(VolunteerData);
+  const [latestNews, setLatestNews] = useState<Newsdata[]>(VolunteerData);
+
   return (
     <div>
       <section>
@@ -20,7 +31,7 @@ const Volunteers: React.FC = () => {
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 lg:items-stretch">
             <div className="flex items-center p-8 bg-gray-100 rounded">
               <div className="mx-auto text-center lg:text-left">
-                <h2 className="text-2xl font-bold">Watches</h2>
+                <h2 className="text-2xl font-bold">News Update</h2>
 
                 <p className="mt-4 text-sm text-gray-700 max-w-[45ch]">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos,
@@ -37,31 +48,36 @@ const Volunteers: React.FC = () => {
             </div>
             {/* Single Card */}
             <div className="grid grid-cols-2 gap-4 lg:col-span-2 lg:grid-cols-3 lg:py-12">
-             <div>
-             <a
-                href="/product/simple-watch"
-                className="block"
-            >
-                <div className="aspect-w-1 aspect-h-1">
-                    <img
-                        loading="lazy"
-                        alt="Simple Watch"
-                        className="object-cover rounded"
-                        src="https://images.unsplash.com/photo-1523275335684-37898b6baf30"
-                    />
-                </div>
+              {
+                latestNews.map((news: Newsdata, i: Number) => (
+                  <div key={news.id}>
+                    <a
+                      href="/product/simple-watch"
+                      className="block"
+                    >
+                      <div className="aspect-w-1 aspect-h-1">
+                        <img
+                          loading="lazy"
+                          alt="Simple Watch"
+                          className="object-cover rounded"
+                          src={news.img}
+                        />
+                      </div>
 
-                <div className="mt-2">
-                    <h5 className="font-medium">
-                        Simple Watch
-                    </h5>
+                      <div className="mt-2">
+                        <h5 className="font-medium">
+                          {news.title}
+                        </h5>
 
-                    <p className="mt-1 text-sm text-gray-700">
-                        $150
-                    </p>
-                </div>
-            </a>
-             </div>
+                        <p className="mt-1 text-sm text-gray-700">
+                          ${news.price}
+                        </p>
+                      </div>
+                    </a>
+                  </div>
+                ))
+              }
+
             </div>
           </div>
         </div>

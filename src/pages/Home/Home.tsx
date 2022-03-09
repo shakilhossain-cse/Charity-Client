@@ -8,7 +8,6 @@ import Contact from "../Contact/Contact";
 import OurMission from "../../components/Mission/Mission";
 import Volunteers from "../../components/Volunteers/Volunteers";
 import Fund from "../../components/Fund/Fund";
-import FeaturePost from "../../components/FeaturePost/FeaturePost";
 
 const Home: React.FC = () => {
   return (
@@ -18,9 +17,11 @@ const Home: React.FC = () => {
       <Banner />
       <FeaturePost />
       <OurMission />
-      {/* <Volunteers /> */}
       <Causes />
+      <Volunteers />
       <Fund />
+      <JoinUs />
+      <Sponsor />
       {/* <Contact /> */}
       <Footer />
     </div>

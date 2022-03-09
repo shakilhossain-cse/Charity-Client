@@ -38,16 +38,16 @@ const Navbar: React.FC = () => {
         {/* ::Navbar */}
         <div className="flex justify-center">
           <nav className="hidden md:mr-auto md:border-gray-500 md:flex flex-wrap items-center justify-center text-base tracking-wide">
-            <a href="#link" className="mr-8 hover:text-red-500">
+            <a href="#link" className="mr-8 hover:text-red-600">
               Solutions
             </a>
-            <a href="#link" className="mr-8 hover:text-red-500">
+            <a href="#link" className="mr-8 hover:text-red-600">
               Prices
             </a>
-            <a href="#link" className="mr-8 hover:text-red-500">
+            <a href="#link" className="mr-8 hover:text-red-600">
               About
             </a>
-            <a href="#link" className="mr-8 hover:text-red-500">
+            <a href="#link" className="mr-8 hover:text-red-600">
               Contact
             </a>
           </nav>

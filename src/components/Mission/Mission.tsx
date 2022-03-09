@@ -16,11 +16,11 @@ const OurMission: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 gap-8 pt-10 mt-16 border-t border-gray-100 sm:grid-cols-2 lg:grid-cols-3 sm:gap-16">
-            <div className="hover:shadow-lg">
+            <div className="">
               <img
                 src="http://muzaddidul.com/Charity-sympathy/images/missions/1.png"
                 alt=""
-                className="object-cover w-28 h-28 mx-auto rounded-full shadow-xl hover:shadow-2xl"
+                className="object-cover w-28 h-28 mx-auto rounded-full shadow-xl hover:drop-shadow-xl "
               />
               <blockquote className="flex flex-col justify-between p-12 -mt-6 text-center rounded-lg  ">
                 <h2 className="font-bold text-2xl pt-3">DONATION</h2>
@@ -29,19 +29,19 @@ const OurMission: React.FC = () => {
                   Deserunt voluptatem alias ut provident sapiente repellendus.
                 </p>
 
-                <div className="flex space-x-0.5 justify-center mt-8 text-white">
-                  <button className="bg-red-600  px-8 py-3 rounded-full mt-4">
+                <div className="flex space-x-0.5 justify-center mt-8">
+                  <button className="bg-white duration-700 text-red-600 px-5 py-1 rounded-full mt-4 border-2 border-solid border-red-400 hover:bg-red-600 hover:text-white">
                     Join Us
                   </button>
                 </div>
               </blockquote>
             </div>
 
-            <div className="hover:shadow-lg">
+            <div className="">
               <img
                 src="http://muzaddidul.com/Charity-sympathy/images/missions/2.png"
                 alt=""
-                className="object-cover w-28 h-28 mx-auto rounded-full shadow-xl hover:shadow-2xl"
+                className="object-cover w-28 h-28 mx-auto rounded-full shadow-xl hover:drop-shadow-xl"
               />
 
               <blockquote className="flex flex-col justify-between p-12 -mt-6 text-center rounded-lg  ">
@@ -52,18 +52,18 @@ const OurMission: React.FC = () => {
                 </p>
 
                 <div className="flex space-x-0.5 justify-center mt-8 text-white">
-                  <button className="bg-red-600 px-8 py-3 rounded-full mt-4">
+                  <button className="bg-white duration-700 text-red-600 px-5 py-1 rounded-full mt-4 border-2 border-solid border-red-400 hover:bg-red-600 hover:text-white">
                     Join Us
                   </button>
                 </div>
               </blockquote>
             </div>
 
-            <div className="hover:shadow-lg">
+            <div className="">
               <img
                 src="http://muzaddidul.com/Charity-sympathy/images/missions/3.png"
                 alt=""
-                className="object-cover w-28 h-28 mx-auto rounded-full shadow-xl hover:shadow-2xl"
+                className="object-cover w-28 h-28 mx-auto rounded-full shadow-xl hover:drop-shadow-xl "
               />
 
               <blockquote className="flex flex-col justify-between p-12 -mt-6 text-center rounded-lg ">
@@ -74,7 +74,7 @@ const OurMission: React.FC = () => {
                 </p>
 
                 <div className="flex space-x-0.5 justify-center mt-8 text-white">
-                  <button className="bg-red-600 px-8 py-3 rounded-full mt-4">
+                  <button className="bg-white duration-700 text-red-600 px-5 py-1 rounded-full mt-4 border-2 border-solid border-red-400 hover:bg-red-600 hover:text-white">
                     Join Us
                   </button>
                 </div>
