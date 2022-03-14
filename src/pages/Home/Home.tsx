@@ -18,7 +18,7 @@ const Home: React.FC = () => {
       <Header />
       <Navbar />
       <Banner />
-      <FeaturePost/>
+      <FeaturePost />
       <OurMission />
       <Causes />
       <Volunteers />
