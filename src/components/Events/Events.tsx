@@ -1,24 +1,24 @@
 import React, { useState } from "react";
-// import Volunteer from "../Volunteer/Volunteer";
+import { BsCalendar2Date } from "react-icons/bs";
 
 const EventsData = [
   {
     id: 1,
     title: "Harry Jonas",
-    price: 150,
+    date: "01-05-2022",
     img: "http://muzaddidul.com/Charity-sympathy/images/event/1.jpg",
   },
   {
     id: 2,
     title: "Harry Jonas",
-    price: 150,
+    date: "01-05-2022",
     img: "http://muzaddidul.com/Charity-sympathy/images/event/1.jpg",
   },
 ];
 interface Data {
   id: number;
   title: string;
-  price: number;
+  date: string;
   img: string;
 }
 const Events: React.FC = () => {
@@ -64,13 +64,13 @@ const Events: React.FC = () => {
                     </div>
 
                     <div className="mt-2">
+                      <h5 className="mt-1 text-xl font-bolder text-red-700 flex ">
+                        <span className="text-black mt-1 mr-2"><BsCalendar2Date /></span> {event.date}
+                      </h5>
                       <h5 className="font-medium">
                         {event.title}
                       </h5>
 
-                      <p className="mt-1 text-sm text-gray-700">
-                        ${event.price}
-                      </p>
                     </div>
                   </a>
                 </div>
