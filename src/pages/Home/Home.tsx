@@ -6,7 +6,7 @@ import Header from "../../components/Header/Header";
 import Navbar from "../../components/Navbar/Navbar";
 import Contact from "../Contact/Contact";
 import OurMission from "../../components/Mission/Mission";
-import Volunteers from "../../components/Volunteers/Volunteers";
+import Events from "../../components/Events/Events";
 import Fund from "../../components/Fund/Fund";
 import FeaturePost from "../../components/FeaturePost/FeaturePost";
 import JoinUs from "../../components/JoinUs/JoinUs";
@@ -21,7 +21,7 @@ const Home: React.FC = () => {
       <FeaturePost />
       <OurMission />
       <Causes />
-      <Volunteers />
+      <Events />
       <Fund />
       <JoinUs />
       <Sponsor />
