@@ -7,9 +7,12 @@ import {
   FaArrowAltCircleDown,
   FaUserAlt,
 } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import useAuth from "../../context/useAuth";
 
 const Header: React.FC = () => {
+  const auth = useAuth();
+const navigate = useNavigate();
   return (
     <header className="md:container md:mx-auto grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 py-2  h-2/3 ">
       <div className="text-sm flex justify-center">
@@ -33,17 +36,26 @@ const Header: React.FC = () => {
           <FaGoogle />
         </a>
       </div>
-      <div className="text-sm flex justify-center">
-        <Link to="/login" className="flex items-center">
-          <FaArrowAltCircleDown className="text-red-400" />
-          <p className="mx-2">Login</p>
-        </Link>
+      {!auth.user ? (
+        <div className="text-sm flex justify-center">
+          <Link to="/login" className="flex items-center">
+            <FaArrowAltCircleDown className="text-red-400" />
+            <p className="mx-2">Login</p>
+          </Link>
 
-        <Link to="/register" className="flex items-center">
-          <FaUserAlt className="text-red-400 mx-2" />
-          <p>Signup</p>
-        </Link>
-      </div>
+          <Link to="/register" className="flex items-center">
+            <FaUserAlt className="text-red-400 mx-2" />
+            <p>Signup</p>
+          </Link>
+        </div>
+      ) : (
+        <div className="text-sm flex justify-center">
+          <button className="flex items-center" onClick={()=>auth.signout(()=>navigate('/'))}>
+            <FaUserAlt className="text-red-400 mx-2" />
+            <p>Logout</p>
+          </button>
+        </div>
+      )}
     </header>
   );
 };

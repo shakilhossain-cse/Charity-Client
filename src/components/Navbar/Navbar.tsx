@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import logo from "../../assets/logo.png";
 
 const Navbar: React.FC = () => {
@@ -44,9 +45,9 @@ const Navbar: React.FC = () => {
             <a href="#link" className="mr-8 hover:text-red-600">
               Prices
             </a>
-            <a href="#link" className="mr-8 hover:text-red-600">
+            <Link to="/about" className="mr-8 hover:text-red-600">
               About
-            </a>
+            </Link>
             <a href="#link" className="mr-8 hover:text-red-600">
               Contact
             </a>
