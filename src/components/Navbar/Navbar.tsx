@@ -22,20 +22,19 @@ const Navbar: React.FC = () => {
           ? " text-white fixed z-50 top-0 left-0 w-full body-font shadow-md transition bg-gray-800 duration-500"
           : "w-full bg-neutral-900 bg-opacity-25 text-gray-100 body-font shadow-sm sticky z-50"
       }
-
     >
       {/* :DESKTOP MENU */}
       <div className="container mx-auto flex justify-between items-center py-7 px-5">
         {/* ::Site logo and Name */}
-        <a
-          href="#link"
+        <Link
+          to="/"
           className="flex flex-shrink-0 title-font font-medium items-center text-gray-900 md:mb-0"
         >
           <img src={logo} className="w-10 h-10" alt="" />
           <span className="ml-3 text-xl text-gray-100 font-semibold antialiased">
             Charity
           </span>
-        </a>
+        </Link>
         {/* ::Navbar */}
         <div className="flex justify-center">
           <nav className="hidden md:mr-auto md:border-gray-500 md:flex flex-wrap items-center justify-center text-base tracking-wide">
