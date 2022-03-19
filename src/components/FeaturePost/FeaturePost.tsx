@@ -1,6 +1,7 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper";
+import { Link } from "react-router-dom";
 
 const FeaturePost: React.FC = () => {
   return (
@@ -17,7 +18,6 @@ const FeaturePost: React.FC = () => {
         }}
         // navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
-    
       >
         <SwiperSlide>
           <div className="flex p-10 shadow-xl">
@@ -28,14 +28,20 @@ const FeaturePost: React.FC = () => {
               />
             </div>
             <div className="ml-6">
-              <h3 className="text-3xl font-bold">
+              <Link to={`/causes/1`} className="text-3xl font-bold">
                 Helping for <span className="text-red-500">education</span> to
                 syrian <br />
                 child &amp; <span className="text-red-500">food planting</span>
-              </h3>
-           <div className="w-full bg-gray-200 rounded-full my-3">
-  <div className="bg-red-600 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style={{width: '45%'}}> 45%</div>
-</div>
+              </Link>
+              <div className="w-full bg-gray-200 rounded-full my-3">
+                <div
+                  className="bg-red-600 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full"
+                  style={{ width: "45%" }}
+                >
+                  {" "}
+                  45%
+                </div>
+              </div>
 
               <h5 className="font-bold text-red-500 text-2xl">
                 $400
@@ -60,14 +66,20 @@ const FeaturePost: React.FC = () => {
               />
             </div>
             <div className="ml-6">
-              <h3 className="text-3xl font-bold">
+              <Link to={`/causes/1`} className="text-3xl font-bold">
                 Helping for <span className="text-red-500">education</span> to
                 syrian <br />
                 child &amp; <span className="text-red-500">food planting</span>
-              </h3>
+              </Link>
               <div className="w-full bg-gray-200 rounded-full my-3">
-  <div className="bg-red-600 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style={{width: '45%'}}> 45%</div>
-</div>
+                <div
+                  className="bg-red-600 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full"
+                  style={{ width: "45%" }}
+                >
+                  {" "}
+                  45%
+                </div>
+              </div>
               <h5 className="font-bold text-red-500 text-2xl">
                 $400
                 <span className="text-gray-700 text-sm font-normal mx-3">
@@ -91,14 +103,20 @@ const FeaturePost: React.FC = () => {
               />
             </div>
             <div className="ml-6">
-              <h3 className="text-3xl font-bold">
+              <Link to={`/causes/1`} className="text-3xl font-bold">
                 Helping for <span className="text-red-500">education</span> to
                 syrian <br />
                 child &amp; <span className="text-red-500">food planting</span>
-              </h3>
+              </Link>
               <div className="w-full bg-gray-200 rounded-full my-3">
-  <div className="bg-red-600 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full" style={{width: '45%'}}> 45%</div>
-</div>
+                <div
+                  className="bg-red-600 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-full"
+                  style={{ width: "45%" }}
+                >
+                  {" "}
+                  45%
+                </div>
+              </div>
               <h5 className="font-bold text-red-500 text-2xl">
                 $400
                 <span className="text-gray-700 text-sm font-normal mx-3">

@@ -1,5 +1,6 @@
 import React, { Suspense, lazy } from "react";
 import { Routes, BrowserRouter, Route } from "react-router-dom";
+import Causes from "../pages/Causes/Causes";
 import Login from "../pages/Login/Login";
 import NotFound from "../pages/NotFound/NotFound";
 import Register from "../pages/Register/Register";
@@ -15,6 +16,7 @@ const AllRoutes: React.FC = () => {
         <Suspense fallback={<div>Loading...</div>}>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/causes/:id" element={<Causes />} />
             <Route
               path="/about"
               element={

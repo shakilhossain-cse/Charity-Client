@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const CausesData = [
   {
@@ -76,9 +77,9 @@ const Causes: React.FC = () => {
                      {cause.fill}%
                     </div>
                   </div>
-                  <p className="text-2xl font-bold tracking-tight">
+                  <Link to={`/causes/${cause.id}`} className="text-2xl font-bold tracking-tight">
                     {cause.title}
-                  </p>
+                  </Link>
                   <p className="mt-4 text-sm text-gray-500">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Deserunt voluptatem alias ut provident sapiente repellendus.

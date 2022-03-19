@@ -1,8 +1,9 @@
 import React from 'react'
+import Layout from '../../components/Layout/Layout'
 
 const About:React.FC = () => {
   return (
-    <div>About</div>
+    <Layout>About</Layout>
   )
 }
 
