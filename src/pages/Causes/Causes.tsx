@@ -7,7 +7,7 @@ const Causes = () => {
       <div className="-mt-24 ">
         <div className="h-[35rem]">
           <div className="bg-[url('http://muzaddidul.com/Charity-sympathy/images/slider/1.jpg')] bg-no-repeat bg-cover  flex items-center justify-center h-full">
-            <div className="text-white z-30 md:w-1/2 p-8 bg-opacity-50 bg-black flex justify-center items-center ">
+            <div className="text-white z-30 md:w-1/2 p-8 bg-opacity-25 bg-black flex justify-center items-center ">
               <div>
                 <h2 className="md:text-6xl text-4xl font-bold my-4">
                   Help The <span className="text-red-700 ">Poor</span> People
@@ -106,16 +106,19 @@ const Causes = () => {
                 accusamus? Magnam
               </p>
             </div>
-            <div className=" border-2">
+            <div className=" border-2 hidden md:block">
               <div className="bg-red-700 opacity-40 w-full h-44 flex z-0 items-center justify-center">
                 <h2 className="text-3xl font-bold text-white">Post Creator</h2>
               </div>
               <div className="flex justify-center -mt-20 ">
                 <img
                   className="w-40 h-40 border rounded-full object-cover z-10"
-                  src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                  src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt=""
                 />
               </div>
+              <h2 className="text-2xl text-center font-bold">
+                Jhon Deo
+              </h2>
               <p className="text-center text-xl text-gray-600 my-3">
                 This is bio
               </p>

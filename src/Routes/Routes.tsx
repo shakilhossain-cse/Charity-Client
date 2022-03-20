@@ -1,13 +1,13 @@
 import React, { Suspense, lazy } from "react";
 import { Routes, BrowserRouter, Route } from "react-router-dom";
-import Causes from "../pages/Causes/Causes";
-import Login from "../pages/Login/Login";
-import NotFound from "../pages/NotFound/NotFound";
-import Register from "../pages/Register/Register";
 import RequireAuth from "./RequireAuth";
 
 const Home = lazy(() => import("../pages/Home/Home"));
+const Login = lazy(()=> import("../pages/Login/Login"))
+const Register = lazy(() => import("../pages/Register/Register"));
+const Causes = lazy(() => import("../pages/Causes/Causes"));
 const About = lazy(() => import("../pages/About/About"));
+const NotFound = lazy(() => import("../pages/NotFound/NotFound"));
 
 const AllRoutes: React.FC = () => {
   return (
