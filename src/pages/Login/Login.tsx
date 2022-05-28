@@ -1,27 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import login from "../../assets/Charity_login.png";
 import { FaLongArrowAltLeft } from "react-icons/fa";
 import useAuth from "../../context/useAuth";
+import { useLoginUserMutation } from "../../features/auth/authAPI";
 
+interface ILoginData {
+  email: string;
+  password: string;
+}
 const Login: React.FC = () => {
   const navigate = useNavigate();
-  const auth = useAuth();
   const location: any = useLocation();
   let from = location.state?.from?.pathname || "/";
+  const [loginData, setLoginData] = useState<ILoginData>({
+    email: "",
+    password: "",
+  });
+  const [loginUser, { data, isLoading }] = useLoginUserMutation();
+
+  const handelChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = event.target;
+    setLoginData({ ...loginData, [name]: value });
+  };
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    loginUser(loginData);
+ 
+    console.log(data);
 
-    // const formData = new FormData(event.currentTarget);
-    // const username = formData.get("username") as string;
-
-    console.log(from)
-    
-    auth.signin("Shakil", () => {
-      navigate(from);
-    });
-    
+    // auth.signin("Shakil", () => {
+    //   navigate(from);
+    // });
   };
   return (
     <div>
@@ -55,7 +66,10 @@ const Login: React.FC = () => {
                     </svg>
                   </span>
                   <input
-                    type="text"
+                  value={loginData.email}
+                    name="email"
+                    onChange={handelChange}
+                    type="email"
                     id="design-login-email"
                     className=" flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
                     placeholder="Email"
@@ -76,6 +90,9 @@ const Login: React.FC = () => {
                     </svg>
                   </span>
                   <input
+                   value={loginData.password}
+                    name="password"
+                    onChange={handelChange}
                     type="password"
                     id="design-login-password"
                     className=" flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
@@ -85,9 +102,9 @@ const Login: React.FC = () => {
               </div>
               <button
                 type="submit"
-                className="w-full px-4 py-2 text-base font-semibold text-center text-white transition duration-200 ease-in bg-black shadow-md hover:text-black hover:bg-white focus:outline-none focus:ring-2"
+                className={`${isLoading? 'bg-gray-500' :'bg-black hover:bg-white hover:text-black'} w-full px-4 py-2 text-base font-semibold text-center text-white transition duration-200 ease-in  shadow-md   focus:outline-none focus:ring-2`}
               >
-                <span className="w-full">Submit</span>
+                <span className="w-full">{isLoading? 'Loging...' :'Login'}</span>
               </button>
             </form>
             <div className="pt-12 pb-12 text-center">
