@@ -20,7 +20,6 @@ export const authSlice = createSlice({
   initialState,
   reducers: {
     login: (state, action: PayloadAction<AuthState>) => {
-
       state.token = action.payload.token;
       state.user = action.payload.user;
 
@@ -32,10 +31,15 @@ export const authSlice = createSlice({
         })
       );
     },
+    logout: (state) => {
+      state.token = null;
+      state.user = null;
+      localStorage.removeItem("auth");
+    },
   },
 });
 
-export const { login } = authSlice.actions;
+export const { login,logout } = authSlice.actions;
 
 export const selectAuth = (state: RootState) => state.auth;
 

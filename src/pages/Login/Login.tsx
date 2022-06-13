@@ -5,7 +5,7 @@ import { FaLongArrowAltLeft } from "react-icons/fa";
 import { useLoginUserMutation } from "../../features/auth/authAPI";
 import { useDispatch } from "react-redux";
 import { login } from "../../features/auth/authSlice";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 
 
 interface ILoginData {
@@ -31,7 +31,11 @@ const Login: React.FC = () => {
     } else {
       navigate("/login");
     }
-  }, [isSuccess]);
+    if (isError) {
+      toast.error("Something went wrong ! try again.");
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isSuccess,isError]);
 
   const handelChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
@@ -122,8 +126,8 @@ const Login: React.FC = () => {
                 }
                 type="submit"
                 className={`${
-                  isLoading ? "bg-gray-700" : "bg-black  hover:text-gray-400"
-                } w-full px-4 py-2 text-base font-semibold text-center text-white transition duration-200 ease-in  shadow-md   focus:outline-none focus:ring-2`}
+                  isLoading ? "bg-gray-600" : "bg-black  hover:text-white"
+                } hover:bg-gray-800 w-full px-4 py-2 text-base font-semibold text-center text-white transition duration-200 ease-in  shadow-md   focus:outline-none focus:ring-2`}
               >
                 <span className="w-full">
                   {isLoading ? "Loging..." : "Login"}
