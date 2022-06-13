@@ -9,8 +9,9 @@ import {
 } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 // import useAuth from "../../context/useAuth";
-import { login, selectAuth } from "../../features/auth/authSlice";
+import { logout, selectAuth } from "../../features/auth/authSlice";
 import { useDispatch, useSelector } from "react-redux";
+import { toast } from "react-toastify";
 
 const Header: React.FC = () => {
   const dispatch = useDispatch();
@@ -18,7 +19,8 @@ const Header: React.FC = () => {
 
   const navigate = useNavigate();
   const handelLogout = () => {
-    dispatch(login({ token: null, user: null }));
+    toast.success(`${user?.name} logout successfully`)
+    dispatch(logout());
     navigate("/");
   };
   return (

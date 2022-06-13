@@ -13,12 +13,9 @@ const NotFound = lazy(() => import("../pages/NotFound/NotFound"));
 
 const AllRoutes: React.FC = () => {
   const dispatch = useDispatch();
-  const userData = localStorage.getItem('auth');
-  if (userData) {
-    const user = JSON.parse(userData);
-    if(user.token){
-      dispatch(login(user)) 
-    }
+  const userData = JSON.parse(localStorage.getItem('auth') || "{}");
+  if (userData.token) {
+      dispatch(login(userData)) 
   }
   
   return (
