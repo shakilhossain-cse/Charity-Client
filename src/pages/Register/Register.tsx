@@ -1,9 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import register from '../../assets/Charity_login.png';
 import { FaLongArrowAltLeft } from 'react-icons/fa';
+import { useRegisterUserMutation } from '../../features/auth/authAPI';
 
 const Register: React.FC = () => {
+    const [registerData, setRegisterData] = useState({name:'', email:'',password:''});
+    const [registerUser,{data,isLoading,isSuccess,isError}] = useRegisterUserMutation();
+    const handelChange = (e:React.ChangeEvent<HTMLInputElement>) =>{
+        e.preventDefault();
+        const {name,value} = e.target;
+        setRegisterData({...registerData,[name]:value});
+    }
+    const handelSubmit = async(e:React.FormEvent) =>{
+        e.preventDefault();
+        if (registerData.name && registerData.email && registerData.password) {
+            await registerUser(registerData)
+        }
+        console.log(isError);
+        
+    }
     return (
         <div>
             <div className="flex flex-wrap w-full">
@@ -17,7 +33,7 @@ const Register: React.FC = () => {
                         <p className="text-3xl text-center">
                             Welcome.
                         </p>
-                        <form className="flex flex-col pt-3 md:pt-8">
+                        <form className="flex flex-col pt-3 md:pt-8" onSubmit={handelSubmit}>
                             <div className="flex flex-col pt-4">
                                 <div className="flex relative ">
                                     <span className=" inline-flex  items-center px-3 border-t bg-white border-l border-b  border-gray-300 text-gray-500 shadow-sm text-sm">
@@ -26,7 +42,7 @@ const Register: React.FC = () => {
                                             </path>
                                         </svg>
                                     </span>
-                                    <input type="text" id="design-login-email" className=" flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="User Name" />
+                                    <input type="text" id="design-login-email" className=" flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="User Name"  name="name" onChange={handelChange}/>
                                 </div>
                             </div>
                             <div className="flex flex-col pt-4">
@@ -37,7 +53,7 @@ const Register: React.FC = () => {
                                             </path>
                                         </svg>
                                     </span>
-                                    <input type="text" id="design-login-email" className=" flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Email" />
+                                    <input type="email" id="design-login-email" className=" flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Email" name="email" onChange={handelChange}/>
                                 </div>
                             </div>
                             <div className="flex flex-col pt-4 mb-12">
@@ -48,7 +64,7 @@ const Register: React.FC = () => {
                                             </path>
                                         </svg>
                                     </span>
-                                    <input type="password" id="design-login-password" className=" flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Password" />
+                                    <input type="password" id="design-login-password" className=" flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Password" name="password" onChange={handelChange}/>
                                 </div>
                             </div>
                             <button type="submit" className="w-full px-4 py-2 text-base font-semibold text-center text-white transition duration-200 ease-in bg-black shadow-md hover:text-black hover:bg-white focus:outline-none focus:ring-2">

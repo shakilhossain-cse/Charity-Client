@@ -1,39 +1,53 @@
-import React, { useState } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
-import login from "../../assets/Charity_login.png";
+import React, { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import loginImg from "../../assets/Charity_login.png";
 import { FaLongArrowAltLeft } from "react-icons/fa";
-import useAuth from "../../context/useAuth";
 import { useLoginUserMutation } from "../../features/auth/authAPI";
+import { useDispatch } from "react-redux";
+import { login } from "../../features/auth/authSlice";
+import { ToastContainer, toast } from "react-toastify";
+
 
 interface ILoginData {
   email: string;
   password: string;
 }
 const Login: React.FC = () => {
+  const dispatch = useDispatch();
   const navigate = useNavigate();
-  const location: any = useLocation();
-  let from = location.state?.from?.pathname || "/";
+
   const [loginData, setLoginData] = useState<ILoginData>({
     email: "",
     password: "",
   });
-  const [loginUser, { data, isLoading }] = useLoginUserMutation();
+  const [loginUser, { data, isLoading, isError, isSuccess }] =
+    useLoginUserMutation();
+
+  useEffect(() => {
+    if (isSuccess) {
+      toast.success("You are Login sucessfully !");
+      dispatch(login({ token: data.token, user: data.user }));
+      navigate("/");
+    } else {
+      navigate("/login");
+    }
+  }, [isSuccess]);
 
   const handelChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
     setLoginData({ ...loginData, [name]: value });
   };
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    loginUser(loginData);
- 
-    console.log(data);
-
-    // auth.signin("Shakil", () => {
-    //   navigate(from);
-    // });
+    if (loginData.email && loginData.password) {
+      await loginUser(loginData);
+    }else{
+      toast.error(`${loginData.email? "Password" : "Email" } Feild is Required`, { autoClose: 15000 });
+    }
   };
+
+
   return (
     <div>
       <div className="flex flex-wrap w-full">
@@ -47,6 +61,8 @@ const Login: React.FC = () => {
             </Link>
           </div>
           <div className="flex flex-col justify-center px-8 pt-8 my-auto md:justify-start md:pt-0 md:px-24 lg:px-32">
+       
+          
             <p className="text-3xl text-center">Welcome.</p>
             <form
               className="flex flex-col pt-3 md:pt-8"
@@ -66,7 +82,7 @@ const Login: React.FC = () => {
                     </svg>
                   </span>
                   <input
-                  value={loginData.email}
+                    value={loginData.email}
                     name="email"
                     onChange={handelChange}
                     type="email"
@@ -90,7 +106,7 @@ const Login: React.FC = () => {
                     </svg>
                   </span>
                   <input
-                   value={loginData.password}
+                    value={loginData.password}
                     name="password"
                     onChange={handelChange}
                     type="password"
@@ -101,10 +117,17 @@ const Login: React.FC = () => {
                 </div>
               </div>
               <button
+                disabled={
+                  !loginData.email && !loginData.password ? true : false
+                }
                 type="submit"
-                className={`${isLoading? 'bg-gray-500' :'bg-black hover:bg-white hover:text-black'} w-full px-4 py-2 text-base font-semibold text-center text-white transition duration-200 ease-in  shadow-md   focus:outline-none focus:ring-2`}
+                className={`${
+                  isLoading ? "bg-gray-700" : "bg-black  hover:text-gray-400"
+                } w-full px-4 py-2 text-base font-semibold text-center text-white transition duration-200 ease-in  shadow-md   focus:outline-none focus:ring-2`}
               >
-                <span className="w-full">{isLoading? 'Loging...' :'Login'}</span>
+                <span className="w-full">
+                  {isLoading ? "Loging..." : "Login"}
+                </span>
               </button>
             </form>
             <div className="pt-12 pb-12 text-center">
@@ -120,8 +143,8 @@ const Login: React.FC = () => {
         <div className="w-1/2 shadow-2xl">
           <img
             className="hidden object-cover w-full h-screen md:block"
-            src={login}
-            alt="login-image"
+            src={loginImg}
+            alt="loginimage"
           />
         </div>
       </div>

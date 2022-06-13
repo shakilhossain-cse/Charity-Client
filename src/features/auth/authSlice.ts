@@ -1,48 +1,42 @@
-import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { RootState, AppThunk } from '../../redux/store';
-// import { fetchCount } from './counterAPI';
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { RootState } from "../../redux/store";
 
 export interface AuthState {
-  value: number;
-  status: 'idle' | 'loading' | 'failed';
+  token: string | null;
+  user: {
+    name: string;
+    avatar: string;
+    email: string;
+  } | null;
 }
 
 const initialState: AuthState = {
-  value: 0,
-  status: 'idle',
+  token: null,
+  user: null,
 };
 
-// export const incrementAsync = createAsyncThunk(
-//   'counter/fetchCount',
-//   async (amount: number) => {
-//     const response = await fetchCount(amount);
-//     // The value we return becomes the `fulfilled` action payload
-//     return response.data;
-//   }
-// );
-
 export const authSlice = createSlice({
-  name: 'auth',
+  name: "auth",
   initialState,
   reducers: {
-    login: (state) => {
-      state.value += 1;
-    }
+    login: (state, action: PayloadAction<AuthState>) => {
+
+      state.token = action.payload.token;
+      state.user = action.payload.user;
+
+      localStorage.setItem(
+        "auth",
+        JSON.stringify({
+          token: action.payload.token,
+          user: action.payload.user,
+        })
+      );
+    },
   },
-//   extraReducers: (builder) => {
-//     builder
-//       .addCase(incrementAsync.pending, (state) => {
-//         state.status = 'loading';
-//       })
-//       .addCase(incrementAsync.fulfilled, (state, action) => {
-//         state.status = 'idle';
-//         state.value += action.payload;
-//       });
-//   },
 });
 
 export const { login } = authSlice.actions;
 
-export const selectCount = (state: RootState) => state.auth.value;
+export const selectAuth = (state: RootState) => state.auth;
 
 export default authSlice.reducer;

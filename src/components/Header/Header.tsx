@@ -8,11 +8,19 @@ import {
   FaUserAlt,
 } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
-import useAuth from "../../context/useAuth";
+// import useAuth from "../../context/useAuth";
+import { login, selectAuth } from "../../features/auth/authSlice";
+import { useDispatch, useSelector } from "react-redux";
 
 const Header: React.FC = () => {
-  const auth = useAuth();
-const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const { user } = useSelector(selectAuth);
+
+  const navigate = useNavigate();
+  const handelLogout = () => {
+    dispatch(login({ token: null, user: null }));
+    navigate("/");
+  };
   return (
     <header className="md:container md:mx-auto grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 py-2  h-2/3 ">
       <div className="text-sm flex justify-center">
@@ -36,7 +44,7 @@ const navigate = useNavigate();
           <FaGoogle />
         </a>
       </div>
-      {!auth.user ? (
+      {!user ? (
         <div className="text-sm flex justify-center">
           <Link to="/login" className="flex items-center">
             <FaArrowAltCircleDown className="text-red-400" />
@@ -50,7 +58,7 @@ const navigate = useNavigate();
         </div>
       ) : (
         <div className="text-sm flex justify-center">
-          <button className="flex items-center" onClick={()=>auth.signout(()=>navigate('/'))}>
+          <button className="flex items-center" onClick={handelLogout}>
             <FaUserAlt className="text-red-400 mx-2" />
             <p>Logout</p>
           </button>
